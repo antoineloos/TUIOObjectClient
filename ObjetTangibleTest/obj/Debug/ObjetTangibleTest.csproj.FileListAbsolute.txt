@@ -1,0 +1,7 @@
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\bin\Debug\ObjetTangibleTest.dll
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\bin\Debug\ObjetTangibleTest.pdb
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\bin\Debug\libTUIO.dll
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\bin\Debug\libTUIO.pdb
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.csprojResolveAssemblyReference.cache
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.dll
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.pdb
