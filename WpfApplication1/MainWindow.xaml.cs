@@ -37,5 +37,8 @@ namespace WpfApplication1
             this.DataContext = new MainWindowVM(this);
            
         }
+
+        
+      
     }
 }

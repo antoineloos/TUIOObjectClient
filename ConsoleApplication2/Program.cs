@@ -28,11 +28,7 @@ namespace ConsoleApplication2
 
                 }
                 else Console.Clear();
-                //if (clt.TangibleCursorLst != null && clt.TangibleCursorLst.Count > 0)
-                //{
-                //    var tmp = clt.TangibleCursorLst.FirstOrDefault();
-                //    Console.WriteLine( " PosX : " + tmp.Position.X.ToString() + " PosY : " + tmp.Position.Y.ToString());
-                //}
+              
             }
         }
     }
