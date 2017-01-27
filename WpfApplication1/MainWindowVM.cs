@@ -2,6 +2,8 @@
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,64 +14,99 @@ namespace WpfApplication1
 {
     public class MainWindowVM : BindableBase
     {
-        private int id;
-        public int Id
-        {
-            get { return id; }
-            set { SetProperty(ref id, value); }
-        }
-
-        private float angle;
-        public float Angle
-        {
-            get { return angle; }
-            set { SetProperty(ref angle, value); }
-        }
-
-        private float posX;
-        public float PosX
-        {
-            get { return posX; }
-            set { SetProperty(ref posX, value); }
-        }
-
-
-
-        private float posY;
-        public float PosY
-        {
-            get { return posY; }
-            set { SetProperty(ref posY, value); }
-        }
+     
 
         public MainWindow MainW { get; set; }
+
+        public Canvas MainCanvas { get; set; }
+
+        private ObservableCollection<TObject> lstTObject;
+        public ObservableCollection<TObject> LstTObject
+        {
+            get { return lstTObject; }
+            set { SetProperty(ref lstTObject, value); }
+        }
+       
 
         public MainWindowVM(MainWindow mainW)
         {
             MainW = mainW;
-            var MainGrid = MainW.mainGr;
+            var MainCanvas = MainW.MainCanvas;
+            LstTObject = new ObservableCollection<TObject>();
+            
             Thread t = new Thread(() =>
             {
-                while (true)
+                Random rd = new Random();
+
+                    while (true)
                 {
                     var lst = CltSingleton.Instance.clt.getTuioObjects();
-
-                    if (lst != null && lst.Count > 0)
+                    
+                    Debug.WriteLine(lst.Count.ToString());
+                    if (lst.Count == 0)
                     {
-                        var tmp = lst.FirstOrDefault();
-                        Id = tmp.SymbolID;
+
                         System.Windows.Application.Current.Dispatcher.InvokeAsync(new Action(() =>
                         {
-                            // = tmp.SymbolID;
-                            Canvas.SetLeft(MainGrid, tmp.Position.X * 1920 - 100);
-                            Canvas.SetTop(MainGrid, tmp.Position.Y * 1080 - 100);
-                            MainW.transf.Angle = tmp.AngleDegrees;
-                        }), System.Windows.Threading.DispatcherPriority.Render).Wait();
+                            if (MainCanvas.Children.Count > 0)
+                            {
+                                MainCanvas.Children.RemoveAt(0);
+                                LstTObject.RemoveAt(0);
+                            }
+                        }));
 
-                        //foreach (TUIO.TuioObject elem in lst)
-                        //{
+                    }
+                    if ( lst.Count > 0)
+                    {
+                        foreach(TUIO.TuioObject obj in lst)
+                        {
+                            if (LstTObject.Where(o => o.VM.Id == obj.SymbolID).Count()>0)
+                            {
+                                var tmp = LstTObject.Where(o => o.VM.Id == obj.SymbolID).First();
+                                
+                                System.Windows.Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                                {
+                                    tmp.VM.Id = obj.SymbolID;
+                                    Canvas.SetLeft(tmp, obj.Position.X * 1920 - 100);
+                                    Canvas.SetTop(tmp, obj.Position.Y * 1080 - 100);
+                                    tmp.transf.Angle = obj.AngleDegrees;
+                                }), System.Windows.Threading.DispatcherPriority.Render).Wait();
 
-                        //}
+                            }
+                            else
+                            {
+
+                                System.Windows.Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                                {
+                                    var tmp = new TObject(obj.SymbolID);
+                                    Canvas.SetLeft(tmp, obj.Position.X * 1920 - 100);
+                                    Canvas.SetTop(tmp, obj.Position.Y * 1080 - 100);
+                                    tmp.transf.Angle = obj.AngleDegrees;
+                                    LstTObject.Add(tmp);
+                                    MainCanvas.Children.Add(tmp);
+                                    
+                                }), System.Windows.Threading.DispatcherPriority.Render).Wait();
+
+                            }
+
+                        }
+
+                        
+
+                        foreach (TObject elem in LstTObject)
+                        {
+                            if ( !lst.Any(o => o.SymbolID == elem.VM.Id))
+                            {
+                                System.Windows.Application.Current.Dispatcher.InvokeAsync(new Action(() =>
+                                {
+                                    MainCanvas.Children.Remove(elem);
+                                    LstTObject.Remove(elem);
+                                }));
+                            }
+
+                        }
+
+
 
 
 

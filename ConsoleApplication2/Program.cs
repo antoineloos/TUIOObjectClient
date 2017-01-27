@@ -22,7 +22,7 @@ namespace ConsoleApplication2
                     {
                         
                         Console.WriteLine("ID : " + tmp.SymbolID.ToString() + " PosX : " + tmp.Position.X.ToString() + " PosY : " + tmp.Position.Y.ToString() + " Angle : " + tmp.AngleDegrees.ToString());
-                        
+                        Console.WriteLine(lst.Count.ToString());
                     }
 
 

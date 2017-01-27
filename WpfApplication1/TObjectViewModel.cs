@@ -16,33 +16,17 @@ namespace WpfApplication1
             set { SetProperty(ref id, value); }
         }
 
-        private float posX;
-        public float PosX
-        {
-            get { return posX; }
-            set { SetProperty(ref posX, value); }
-        }
-
-
-
-        private float posY;
-        public float PosY
-        {
-            get { return posY; }
-            set { SetProperty(ref posY, value); }
-        }
-        public TObjectViewModel(int id, float x, float y)
+     
+        public TObjectViewModel(int id)
         {
             Id = id;
-            PosX = x;
-            PosY = y;
+          
         }
 
-        public void Update(int id, float x, float y)
+        public void Update(int id)
         {
             Id = id;
-            PosX = x;
-            PosY = y;
+           
         }
     }
 }

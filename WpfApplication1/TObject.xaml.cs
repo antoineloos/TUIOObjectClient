@@ -20,10 +20,12 @@ namespace WpfApplication1
     /// </summary>
     public partial class TObject : UserControl
     {
-        public TObject(int id, float x, float y)
+        public TObjectViewModel VM { get; set; }
+
+        public TObject(int id)
         {
             InitializeComponent();
-            this.DataContext = new TObjectViewModel(id,  x,  y);
+            this.DataContext = VM = new TObjectViewModel(id);
         }
     }
 }
