@@ -1,0 +1,292 @@
+﻿<UserControl x:Class="WpfApplication1.TObject"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfApplication1"
+              xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             d:DataContext="{d:DesignInstance IsDesignTimeCreatable=False,
+                                              Type={x:Type local:TObjectViewModel}}"
+             d:DesignHeight="350"
+             d:DesignWidth="350"
+             mc:Ignorable="d">
+    <Grid x:Name="mainGr"
+          Width="250"
+          Height="250"
+          Background="Transparent">
+        <Grid.Resources>
+            <Style TargetType="{x:Type Line}">
+                <Setter Property="Stroke" Value="{Binding Capsule.Couleur}" />
+            </Style>
+            <Style TargetType="{x:Type Button}">
+                <Setter Property="BorderThickness" Value="0" />
+            </Style>
+        </Grid.Resources>
+        <Grid.RenderTransform>
+            <RotateTransform x:Name="transf" CenterX="125" CenterY="125" />
+        </Grid.RenderTransform>
+
+        <Line StrokeThickness="4"
+              X1="-26"
+              X2="40"
+              Y1="-8"
+              Y2="40" />
+        <Line Stroke="{Binding Path=Capsule.Couleur}"
+              StrokeThickness="4"
+              X1="227"
+              X2="215"
+              Y1="33"
+              Y2="45" />
+        <Line Margin="-6,37,6,-37"
+              StrokeThickness="4"
+              X1="-36"
+              X2="10"
+              Y1="48"
+              Y2="80" />
+        <Ellipse HorizontalAlignment="Stretch"
+                 VerticalAlignment="Stretch"
+                 Stroke="{Binding Path=Capsule.Couleur}"
+                 StrokeThickness="5" />
+        <!--  {Binding Path=Capsule.Couleur}  -->
+        <Ellipse Width="80"
+                 Height="80"
+                 Margin="0,-32,-47,0"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Stroke="{Binding Path=Capsule.Couleur}"
+                 StrokeThickness="3" />
+        <Ellipse Width="60"
+                 Height="60"
+                 Margin="0,48,-82,0"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Stroke="White"
+                 StrokeThickness="3" />
+
+        <Line Margin="228,-10,-228,10"
+              Stroke="White"
+              StrokeThickness="4"
+              X1="50"
+              X2="59"
+              Y1="50"
+              Y2="63" />
+        <Line Margin="220,80,-220,-80"
+              RenderTransformOrigin="0.5,0.5"
+              Stroke="White"
+              StrokeThickness="4"
+              X1="50"
+              X2="59"
+              Y1="50"
+              Y2="63">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="23.161" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+
+        <Button Width="60"
+                Height="60"
+                Margin="0,-23,-36,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <prism:InvokeCommandAction Command="{Binding AddCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+
+            <Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    x:Name="appbar_cart"
+                    Width="76"
+                    Height="76"
+                    Clip="F1 M 0,0L 76,0L 76,76L 0,76L 0,0">
+                <Path Canvas.Left="10"
+                      Canvas.Top="16.167"
+                      Width="38"
+                      Height="31.666"
+                      Data="F1 M 46.7083,47.5C 48.8945,47.5 50.6667,49.2722 50.6667,51.4583C 50.6667,53.6445 48.8945,55.4167 46.7083,55.4167C 44.5222,55.4167 42.75,53.6445 42.75,51.4583C 42.75,49.2722 44.5222,47.5 46.7083,47.5 Z M 30.875,47.5C 33.0611,47.5 34.8333,49.2722 34.8333,51.4583C 34.8333,53.6445 33.0611,55.4167 30.875,55.4167C 28.6889,55.4167 26.9167,53.6445 26.9167,51.4583C 26.9167,49.2722 28.6889,47.5 30.875,47.5 Z M 25.3333,45.9167L 25.3333,41.1667L 22.1667,28.5L 19,28.5L 19,23.75L 26.9167,23.75L 26.9167,28.5L 57,28.5L 52.25,45.9167L 25.3333,45.9167 Z M 30.2417,41.1667L 48.925,41.1667L 50.825,33.25L 28.3417,33.25L 30.2417,41.1667 Z "
+                      Fill="White"
+                      Stretch="Fill" />
+            </Canvas>
+        </Button>
+        <!--  Stroke="{Binding Path=Capsule.Couleur}"  -->
+        <TextBlock Width="400"
+                   Margin="-429,-52,279,254"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Bottom"
+                   Panel.ZIndex="10"
+                   FlowDirection="RightToLeft"
+                   FontFamily="Lato"
+                   FontSize="40"
+                   Foreground="{Binding Capsule.Couleur}"
+                   Text="{Binding Capsule.Nom}" />
+        <TextBlock Margin="-121,50,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="Lato"
+                   FontSize="25"
+                   Foreground="White"
+                   Text="{Binding Capsule.Prix}" />
+        <Line Margin="-121,85,121,-85"
+              StrokeThickness="4"
+              X1="0"
+              X2="80"
+              Y1="0"
+              Y2="0" />
+        <Line Margin="-77,-111,77,111"
+              RenderTransformOrigin="0.5,0.5"
+              StrokeThickness="4"
+              X1="-36"
+              X2="10"
+              Y1="48"
+              Y2="80">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-90" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line Margin="-121,175,121,-175"
+              StrokeThickness="4"
+              X1="0"
+              X2="93"
+              Y1="0"
+              Y2="0" />
+        <TextBlock Margin="-121,140,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="Lato"
+                   FontSize="25"
+                   Foreground="White"
+                   Text="{Binding Capsule.Contenance}" />
+        <Line Margin="4,7,-4,-7"
+              RenderTransformOrigin="0.5,0.5"
+              StrokeThickness="4"
+              X1="-26"
+              X2="40"
+              Y1="-8"
+              Y2="40">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="-90" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <Line Margin="-121,282,121,-282"
+              StrokeThickness="4"
+              X1="0"
+              X2="118"
+              Y1="0"
+              Y2="0" />
+        <TextBlock Margin="-121,247,0,-27"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="Lato"
+                   FontSize="25"
+                   Foreground="White"
+                   Text="{Binding Capsule.Intensite}" />
+        <TextBlock Margin="-121,222,0,-2"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   FontFamily="Sans Serif"
+                   FontSize="20"
+                   FontWeight="Light"
+                   Foreground="White"
+                   Text="Intensité :" />
+        <Ellipse Width="60"
+                 Height="60"
+                 Margin="0,121,-91,0"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Stroke="White"
+                 StrokeThickness="3" />
+        <Ellipse Width="60"
+                 Height="60"
+                 Margin="0,186,-54,0"
+                 HorizontalAlignment="Right"
+                 VerticalAlignment="Top"
+                 Stroke="White"
+                 StrokeThickness="3" />
+        <Line Margin="139,153,-139,-153"
+              RenderTransformOrigin="0.5,0.5"
+              Stroke="White"
+              StrokeThickness="4"
+              X1="50"
+              X2="59"
+              Y1="50"
+              Y2="63">
+            <Line.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform Angle="63.104" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Line.RenderTransform>
+        </Line>
+        <TextBlock Width="28"
+                   Height="48"
+                   Margin="300,122,-78,80"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="40"
+                   Foreground="White"
+                   Text="{Binding NbProduit}" />
+        <Button Width="50"
+                Height="50"
+                Margin="0,53,-77,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <prism:InvokeCommandAction Command="{Binding PlusCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Button.Content>
+                <TextBlock Width="34"
+                           Height="76"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="50"
+                           Foreground="White"
+                           Text="+" />
+            </Button.Content>
+
+        </Button>
+        <Button Width="50"
+                Height="50"
+                Margin="0,190,-49,0"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="TouchDown">
+                    <prism:InvokeCommandAction Command="{Binding MoinCommand}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <TextBlock Width="20"
+                       Height="76"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="50"
+                       Foreground="White"
+                       Text="-" />
+
+        </Button>
+
+    </Grid>
+</UserControl>

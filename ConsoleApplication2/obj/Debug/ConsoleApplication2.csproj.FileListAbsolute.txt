@@ -1,0 +1,20 @@
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\libTUIO.dll
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\ObjetTangibleTest.dll
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\libTUIO.pdb
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\bin\Debug\ObjetTangibleTest.pdb
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+C:\Users\ELECOM\documents\visual studio 2015\Projects\ObjetTangibleTest\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe.config
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\ConsoleApplication2.exe
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\ConsoleApplication2.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\libTUIO.dll
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\ObjetTangibleTest.dll
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\libTUIO.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\bin\Debug\ObjetTangibleTest.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\obj\Debug\ConsoleApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\obj\Debug\ConsoleApplication2.exe
+C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ConsoleApplication2\obj\Debug\ConsoleApplication2.pdb
