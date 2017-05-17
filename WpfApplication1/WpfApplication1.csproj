@@ -134,7 +134,7 @@
       <Project>{5ce7b0ab-eee5-4d43-a44a-ed9234c7e091}</Project>
       <Name>ObjetTangibleTest</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TUIO11_NET-1.1.5\TUIO11_NET\TUIO_LIB.csproj">
+    <ProjectReference Include="..\TUIOCustomLib\TUIO_LIB.csproj">
       <Project>{3cbf7d4a-ce06-490d-80da-580d02c268de}</Project>
       <Name>TUIO_LIB</Name>
     </ProjectReference>

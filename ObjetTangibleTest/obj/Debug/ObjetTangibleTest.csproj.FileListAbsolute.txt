@@ -12,3 +12,10 @@ C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ObjetTa
 C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.csprojResolveAssemblyReference.cache
 C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.dll
 C:\Users\Antoine\Desktop\TUIOObjectClient-master\TUIOObjectClient-master\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\bin\Debug\ObjetTangibleTest.dll
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\bin\Debug\ObjetTangibleTest.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\bin\Debug\libTUIO.dll
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\bin\Debug\libTUIO.pdb
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.dll
+C:\Users\Antoine\Desktop\TUIOObjectClient\ObjetTangibleTest\obj\Debug\ObjetTangibleTest.pdb
