@@ -1,0 +1,29 @@
+[
+  {
+    "IdObj": 1,
+    "Couleur": "#FFCE0058",
+    "Nom": "Lungo Forte",
+    "Prix": "0,29€",
+    "Type": "Lungo",
+    "Contenance": "110ml",
+    "Intensite": "8/10"
+  },
+  {
+    "IdObj": 2,
+    "Couleur": "#FF0085CA",
+    "Nom": "Lungo",
+    "Prix": "0,29€",
+    "Type": "Lungo",
+    "Contenance": "110ml",
+    "Intensite": "4/10"
+  },
+  {
+    "IdObj": 3,
+    "Couleur": "#FFFFCE04",
+    "Nom": "Expresso",
+    "Prix": "0,29€",
+    "Type": "Expresso",
+    "Contenance": "110ml",
+    "Intensite": "5/10"
+  }
+]
